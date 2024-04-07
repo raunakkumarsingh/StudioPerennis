@@ -16,9 +16,9 @@ const Navbar = () => {
       </Link>
       <div className={`nav-items ${isOpen ? "open" : ""} d-flex `}>
         <Link onClick={() => setIsOpen(!isOpen)}  to="/home"><strong>Home</strong></Link>
-        <Link onClick={() => setIsOpen(!isOpen)}  to="/home"><strong>About</strong></Link>
-        <Link onClick={() => setIsOpen(!isOpen)} to="/vision"><strong>courses</strong></Link>
-        <Link onClick={() => setIsOpen(!isOpen)} to="/contact"><strong>Blog</strong></Link>
+        <Link onClick={() => setIsOpen(!isOpen)} to="/courses"><strong>courses</strong></Link>
+        <Link onClick={() => setIsOpen(!isOpen)} to="/blog"><strong>Blog</strong></Link>
+        <Link onClick={() => setIsOpen(!isOpen)}  to="/contact"><strong>contact</strong></Link>
       </div>
       <div className={`nav-toggle ${isOpen ? "open" : ""}`} onClick={() => setIsOpen(!isOpen)}>
         <div className="bar"></div>
