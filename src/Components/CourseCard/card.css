@@ -1,5 +1,11 @@
 .card-css{
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 52px;
+background: #e0e0e0;
+box-shadow:  33px 33px 66px #bebebe,
+             -33px -33px 66px #ffffff;
+}
+.card-css img{
+    border-radius: 52px 52px 0 0;
 }

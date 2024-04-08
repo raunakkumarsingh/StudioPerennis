@@ -1,10 +1,48 @@
-.main-container{
-    background-image: url('../../Assets/Tree.jpg');
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .banner {
+    background-image: url('../../Assets/Tree.jpg'); /* Add your banner image path */
+    background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 100%;
-    margin: 0px;
-}
-.txt{
-    z-index: 1;
-    color: rgb(0, 0, 0);
-}
+    height: 60vh; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .cards-section {
+    margin-top: 50px;
+  }
+  
+  .card {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  }
+  

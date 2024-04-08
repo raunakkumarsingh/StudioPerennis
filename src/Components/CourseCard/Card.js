@@ -1,8 +1,8 @@
 import React from 'react';
-
+import './card.css'
 function Card({ course }) {
   return (
-    <div className="card card-css mb-3" style={{ maxWidth: '18rem' }}>
+    <div className="card card-css my-2" style={{ maxWidth: '18rem' }}>
       <div className="d-flex justify-content-center"> {/* Center the image */}
         <img src={require(`../../Assets/${course.image}`)} className="card-img-top" alt="Course" />
       </div>

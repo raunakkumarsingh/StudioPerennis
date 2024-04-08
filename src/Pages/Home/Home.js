@@ -1,24 +1,37 @@
 import React from 'react';
-import './home.css'; 
-import bg from '../../Assets/Tree.jpg'
-import SearchBar from '../../Components/SearchBar/SearchBar';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import './home.css'; // Import your custom CSS file for additional styling
 
-function Home() {
-  return (
-    <div className='main-container'>
-      {/* <img src={bg} alt='#' width="100" height="100" />
-    <div className="container d-flex flex-column justify-content-center align-items-center vh-100 vw-100">
-      <h1 className="txt text-center">Studio Perennis</h1>
-      <h6 className="txt text-center">Developing Intelligence</h6>
-      <SearchBar/>
-    </div> */}
+class HomePage extends React.Component {
+  render() {
+    return (
+      <div className="homepage">
+        <div className="banner">
+          <div className="content">
+            <h1 className="title">StudioPrennis</h1>
+            <Button variant="primary" size="lg">Get Started</Button>
+          </div>
+        </div>
 
-    <div className='container-1'>
-      
-    </div>
-    
-    </div>
-  );
+        <div className="cards-section">
+          <Container>
+            <Row>
+              {[1, 2, 3, 4].map((index) => (
+                <Col key={index} md={3}>
+                  <Card className="mb-4">
+                    <Card.Body>
+                      <Card.Title>Card {index}</Card.Title>
+                      <Card.Text>This is a sample card</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default Home;
+export default HomePage;

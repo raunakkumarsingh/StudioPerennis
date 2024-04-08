@@ -1,13 +1,28 @@
 import React from 'react'
+import './Searchbar.css'
+function SearchBar({ setSearchQuery }) {
+  const handleInputChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
 
-function SearchBar() {
   return (
-    <form className="d-flex" role="search">
-    <input className="form-control mx-2" type="search" placeholder="Search" aria-label="Search"/>
-    <button className="btn btn-outline-success" type="submit">Search</button>
-  </form>
-
-  )
+    <div className="container">
+      <div className="row height d-flex justify-content-center align-items-center">
+        <div className="col-md-6">
+          <div className="form">
+            <i className="fa fa-search"></i>
+            <input
+              type="text"
+              className="form-control form-input inp"
+              placeholder="Search anything..."
+              onChange={handleInputChange}
+            />
+            <span className="left-pan"><i className="fa fa-microphone"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default SearchBar
+export default SearchBar;
